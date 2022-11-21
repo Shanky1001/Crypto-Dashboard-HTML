@@ -386,7 +386,7 @@
           <!-- Horizontal Group 1 Starts -->
           <ul class="col-1 dis--flex">
             <li class="col-1__cards">
-              <div class="col-1__cards--text">
+              <div class="col-1__cards--text dis--flex-c">
                 <h3 class="cards__text--title">Total Profit</h3>
                 <h2 class="cards__text--amount">
                   $559.25k
@@ -419,7 +419,7 @@
               </div>
             </li>
             <li class="col-1__cards">
-              <div class="col-1__cards--text">
+              <div class="col-1__cards--text dis--flex-c">
                 <h3 class="cards__text--title">Total Profit</h3>
                 <h2 class="cards__text--amount">
                   $559.25k
@@ -452,7 +452,7 @@
               </div>
             </li>
             <li class="col-1__cards">
-              <div class="col-1__cards--text">
+              <div class="col-1__cards--text dis--flex-c">
                 <h3 class="cards__text--title">Total Profit</h3>
                 <h2 class="cards__text--amount">
                   $559.25k
@@ -485,7 +485,7 @@
               </div>
             </li>
             <li class="col-1__cards">
-              <div class="col-1__cards--text">
+              <div class="col-1__cards--text dis--flex-c">
                 <h3 class="cards__text--title">Total Profit</h3>
                 <h2 class="cards__text--amount">
                   $559.25k
@@ -666,7 +666,7 @@
               <ul class="col2__statistics--data dis--flex-c">
                 <li class="col2__data dis--flex">
                   <div class="data__title dis--flex">
-                    <span class="data__title--symbol blue"></span>
+                    <span class="data--symbol blue"></span>
                     <span class="data__title--name">Income</span>
                     <span class="data__title--percent data__title--percent-blue dis--flex">
                       <span><svg class="data__title--percent-blue" width="12" height="8" viewBox="0 0 12 8" fill="none"
@@ -682,7 +682,7 @@
                 </li>
                 <li class="col2__data dis--flex">
                   <div class="data__title dis--flex">
-                    <span class="data__title--symbol green"></span>
+                    <span class="data--symbol green"></span>
                     <span class="data__title--name">Income</span>
                     <span class="data__title--percent data__title--percent-green dis--flex">
                       <span><svg class="data__title--percent-green" width="12" height="8" viewBox="0 0 12 8" fill="none"
@@ -698,7 +698,7 @@
                 </li>
                 <li class="col2__data dis--flex">
                   <div class="data__title dis--flex">
-                    <span class="data__title--symbol red"></span>
+                    <span class="data--symbol red"></span>
                     <span class="data__title--name">Income</span>
                     <span class="data__title--percent data__title--percent-red dis--flex">
                       <span><svg class="data__title--percent-red" width="12" height="8" viewBox="0 0 12 8" fill="none"
@@ -714,7 +714,7 @@
                 </li>
                 <li class="col2__data dis--flex">
                   <div class="data__title dis--flex">
-                    <span class="data__title--symbol orange"></span>
+                    <span class="data--symbol orange"></span>
                     <span class="data__title--name">Income</span>
                     <span class="data__title--percent data__title--percent-orange dis--flex">
                       <span><svg class="data__title--percent-orange" width="12" height="8" viewBox="0 0 12 8"
@@ -889,7 +889,7 @@
                 </tr>
               </tbody>
               <tfoot>
-                <tr class="col3__table-1__row pagination dis--flex">
+                <tr class="footer--pagination">
                   <td class="pagination__result">
                     Showing 5 of 25 results
                   </td>
@@ -909,7 +909,7 @@
                       <li class="pagination--number">2</li>
                       <li class="pagination--number">3</li>
                       <li class="pagination--number">...</li>
-                      <li>10</li>
+                      <li class="pagination--number">10</li>
                       <li class="pagination--next">
                         <svg width="6" height="14" viewBox="0 0 6 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd"
@@ -1111,7 +1111,7 @@
                 </tr>
               </tbody>
               <tfoot>
-                <tr class="col3__table-1__row pagination dis--flex">
+                <tr class="footer--pagination">
                   <td class="pagination__result">
                     Showing 5 of 25 results
                   </td>
@@ -1132,7 +1132,7 @@
                       <li class="pagination--number">2</li>
                       <li class="pagination--number">3</li>
                       <li class="pagination--number">...</li>
-                      <li>10</li>
+                      <li class="pagination--number">10</li>
                       <li class="pagination--next">
                         <svg width="6" height="14" viewBox="0 0 6 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd"
@@ -1190,11 +1190,26 @@
                   </div>
                 </div>
                 <div class="col4__marking dis--flex">
-                  <span class="marking marking--direct">Direct</span>
-                  <span class="marking marking--social">Social</span>
-                  <span class="marking marking--email">Email</span>
-                  <span class="marking marking--others">Others</span>
-                  <span class="marking marking--refferal">Referrals</span>
+                  <span class="marking__container dis--flex">
+                    <span class="data--symbol blue"></span>
+                    <span class="marking">Direct</span>
+                  </span>
+                  <span class="marking__container dis--flex">
+                    <span class="data--symbol green"></span>
+                    <span class="marking">Social</span>
+                  </span>
+                  <span class="marking__container dis--flex">
+                    <span class="data--symbol yellow"></span>
+                    <span class="marking">Emails</span>
+                  </span>
+                  <span class="marking__container dis--flex">
+                    <span class="data--symbol orange"></span>
+                    <span class="marking">Others</span>
+                  </span>
+                  <span class="marking__container dis--flex">
+                    <span class="data--symbol red"></span>
+                    <span class="marking">Referrals</span>
+                  </span>
                 </div>
               </div>
               <div class="vertical__chart">
@@ -1211,7 +1226,7 @@
                 <div class="col4__vertical-chart__content dis--flex">
                   <ul class="col4__content--data dis--flex-c ">
                     <li class="col4__data">
-                      <span class="data--symbol blue "></span>
+                      <span class="data--symbol blue"></span>
                       <span class="data--name">Social Media</span>
                       <span class="data--value">85.71%</span>
                     </li>
@@ -1461,7 +1476,7 @@
                   </tr>
                 </tbody>
                 <tfoot>
-                  <tr class="col3__table-2__row pagination dis--flex">
+                  <tr class="footer--pagination">
                     <td class="pagination__result">Showing 10 of 25 results</td>
                     <td></td>
                     <td></td>
@@ -1480,7 +1495,7 @@
                         <li class="pagination--number">2</li>
                         <li class="pagination--number">3</li>
                         <li class="pagination--number">...</li>
-                        <li>10</li>
+                        <li class="pagination--number">10</li>
                         <li class="pagination--next">
                           <svg width="6" height="14" viewBox="0 0 6 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
