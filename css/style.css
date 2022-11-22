@@ -160,6 +160,16 @@
     outline: 3px solid #FEF08A;
 }
 
+.select--text {
+    font-size: 18px;
+}
+
+.select--text-show {
+    background: #EFF6FF;
+    border-radius: 4px;
+    padding: 11px 32px;
+}
+
 /* Setting Default Properties */
 
 body {
@@ -192,6 +202,12 @@ select {
     outline: none;
 }
 
+option {
+    color: #94A3B8;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
 
 /* Header / Topbar Styles */
 .topbar__wrapper {
@@ -374,9 +390,6 @@ select {
 }
 
 .col-groups {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
     gap: 32px;
 }
 
@@ -387,11 +400,7 @@ select {
     width: 100%;
 }
 
-.col-1:nth-child(4) {
-    gap: 0;
-}
-
-.col-1__cards {
+.group__1--cards {
     background-color: #FFFFFF;
     box-shadow: var(--box-shadow);
     display: flex;
@@ -400,14 +409,13 @@ select {
     padding: 20px;
 }
 
-.col-1__cards--text {
-    flex-direction: column;
+.cards--text {
     flex-grow: 100;
     gap: 12px;
 }
 
 .cards__text--title {
-    color: #475569;
+    color: var(--color-fiord);
     font-size: 20px;
     font-weight: 600;
     line-height: 28px;
@@ -423,20 +431,15 @@ select {
 }
 
 .cards__text--link {
-    color: dodgerblue;
+    color: #1D4ED8;
     font-size: 14px;
     font-weight: 600;
     line-height: 16px;
     text-decoration: underline;
 }
 
-.col-1__cards--base {
-    align-items: flex-end;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 100;
+.cards--base {
     gap: 20px;
-    justify-content: space-between;
 }
 
 .base__icon-text {
@@ -466,7 +469,6 @@ select {
 
 .base__dollar {
     color: #FFFFFF;
-    content: "$";
     left: calc(50% - 7px);
     position: absolute;
     top: calc(50% - 14px);
@@ -481,7 +483,7 @@ select {
     width: 100%;
 }
 
-.col-2__current-statistics {
+.current-stats {
     background: #FFFFFF;
     border-radius: 4px;
     box-shadow: var(--box-shadow);
@@ -490,7 +492,7 @@ select {
     width: 376px;
 }
 
-.col-2__market-overview {
+.market-overview {
     background: #FFFFFF;
     border-radius: 4px;
     box-shadow: var(--box-shadow);
@@ -507,10 +509,6 @@ select {
 .col-2__market--control {
     justify-content: space-between;
     padding: 0 20px;
-}
-
-.control--text {
-    font-size: 18px;
 }
 
 .col-2__market--control select {
@@ -695,12 +693,12 @@ input:checked+.switch:active::before {
 
 /* Current Statics style */
 
-.col2__statistics--title {
+.stats__title {
     justify-content: space-between;
     padding: 20px;
 }
 
-.col2__statistics--chart {
+.stats__chart {
     height: 162px;
     justify-content: center;
     margin: auto;
@@ -716,16 +714,14 @@ input:checked+.switch:active::before {
 }
 
 .chart--orange {
-    display: inline-grid;
     height: 125px;
     left: calc(50% - 125px/2);
-    place-content: center;
     position: absolute;
     width: 125px;
 }
 
 .chart--orange::before {
-    background: radial-gradient(farthest-side, #F97316 98%, #0000) top/5px 5px no-repeat, conic-gradient(#F97316 calc(30*1%), #0000 0);
+    background: radial-gradient(farthest-side, #F97316 98%, #0000) top/5px 5px no-repeat, conic-gradient(#F97316 calc(30*1%), #F8FAFC 30% 50%, #0000 0);
     border-radius: 50%;
     content: "";
     inset: 0;
@@ -744,16 +740,14 @@ input:checked+.switch:active::before {
 }
 
 .chart--red {
-    display: inline-grid;
     height: 162px;
     left: calc(50% - 162px/2);
-    place-content: center;
     position: absolute;
     width: 162px;
 }
 
 .chart--red::before {
-    background: radial-gradient(farthest-side, #EF4444 98%, #0000) top/5px 5px no-repeat, conic-gradient(#EF4444 calc(35*1%), #0000 0);
+    background: radial-gradient(farthest-side, #EF4444 98%, #0000) top/5px 5px no-repeat, conic-gradient(#EF4444 0 35%, #F8FAFC 35% 50%, #0000 0);
     border-radius: 50%;
     content: "";
     inset: 0;
@@ -772,16 +766,14 @@ input:checked+.switch:active::before {
 }
 
 .chart--green {
-    display: inline-grid;
     height: 200px;
     left: calc(50% - 100px);
-    place-content: center;
     position: absolute;
     width: 200px;
 }
 
 .chart--green::before {
-    background: radial-gradient(farthest-side, #22C55E 98%, #0000) top/5px 5px no-repeat, conic-gradient(#22C55E calc(40*1%), #0000 0);
+    background: radial-gradient(farthest-side, #22C55E 98%, #0000) top/5px 5px no-repeat, conic-gradient(#22C55E 0 40%, #F8FAFC 40% 50%, #0000 0);
     border-radius: 50%;
     content: "";
     inset: 0;
@@ -800,16 +792,14 @@ input:checked+.switch:active::before {
 }
 
 .chart--blue {
-    display: inline-grid;
     height: 240px;
     left: calc(50% - 120px);
-    place-content: center;
     position: absolute;
     width: 240px;
 }
 
 .chart--blue::before {
-    background: radial-gradient(farthest-side, dodgerblue 98%, #0000) top/5px 5px no-repeat, conic-gradient(dodgerblue calc(45*1%), #0000 0);
+    background: radial-gradient(farthest-side, dodgerblue 98%, #0000) top/5px 5px no-repeat, conic-gradient(dodgerblue 0 45%, #F8FAFC 45% 50%, #0000 0);
     border-radius: 50%;
     content: "";
     inset: 0;
@@ -828,12 +818,12 @@ input:checked+.switch:active::before {
 }
 
 /* Col 2 - Pie chart styles ends  */
-.col2__statistics--data {
+.stats__data__list {
     gap: 14px;
     padding: 20px;
 }
 
-.col2__data {
+.data__list-items {
     color: var(--color-fiord);
     font-size: 14px;
     font-weight: 400;
@@ -844,6 +834,10 @@ input:checked+.switch:active::before {
 
 .data__title {
     gap: 8px;
+}
+
+.data__title--percent {
+    gap: 4px;
 }
 
 .data__title--percent-blue {
@@ -866,9 +860,7 @@ input:checked+.switch:active::before {
     fill: #F97316 !important;
 }
 
-.data__title--percent {
-    gap: 4px;
-}
+
 
 /* Col 3 Styles */
 
@@ -879,20 +871,26 @@ input:checked+.switch:active::before {
 }
 
 .table--1,
-.table--2 {
+.table--2,
+.table--3 {
     background-color: #FFFFFF;
     border-radius: 4px;
     box-shadow: var(--box-shadow);
     flex: 1;
     flex-grow: 100;
+    width: 100%;
 }
 
-.col3__table__title {
+.table__title {
+    align-items: center;
+    display: flex;
     justify-content: space-between;
     padding: 20px;
 }
 
-.col3__table-1__title--filter {
+.table__title--filter {
+    align-items: center;
+    display: flex;
     font-size: 18px;
     font-weight: 400;
     gap: 16px;
@@ -900,22 +898,18 @@ input:checked+.switch:active::before {
     line-height: 24px;
 }
 
-.col3__table select {
-    border: none;
-    color: var(--color-fiord);
-    cursor: pointer;
-    font-size: 18px;
-    outline: none;
-}
-
-.col3__table-1__row {
+.table--1__row {
+    align-items: center;
     border-top: 0.5px solid var(--color-gull-gray);
+    display: flex;
     gap: 20px;
     padding: 12px 20px;
 }
 
-.col3__table-2__row {
+.table--2__row {
+    align-items: center;
     border-top: 0.5px solid var(--color-gull-gray);
+    display: flex;
     justify-content: space-between;
     padding: 10px 20px;
 }
@@ -965,26 +959,7 @@ input:checked+.switch:active::before {
     gap: 6px;
 }
 
-.control--text-show {
-    background: #EFF6FF;
-    border-radius: 4px;
-    padding: 11px 32px;
-}
-
-.control--text-show select {
-    background: none !important;
-    outline: none !important;
-}
-
-option {
-    color: #94A3B8;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 24px;
-}
-
 /* Col 4 Styles */
-
 .col-4 {
     align-items: flex-start !important;
     gap: 32px;
@@ -1002,7 +977,7 @@ option {
     width: 100%;
 }
 
-.vertical__chart {
+.vertical__chart__container {
     background: #FFFFFF;
     border-radius: 4px;
     box-shadow: var(--box-shadow);
@@ -1010,118 +985,28 @@ option {
     width: 100%;
 }
 
-.col4__market--title {
+.vertical__chart--title {
     justify-content: space-between;
 }
 
-.col4__filter {
+.vertical__chart__market--filter {
     justify-content: flex-end;
     padding: 0 0 20px 0;
 }
 
-.col4__chart {
-    height: 240px;
+.vertical__chart--chart-1 {
     justify-content: center;
 }
 
 /* Col 4 - pie chart 1 styles starts */
-.col4__chart-container {
+.vertical__chart-1__container {
     height: 240px;
     position: relative;
     width: 240px;
 }
 
-.col4__chart-container--yellow {
-    color: var(--color-fiord);
-    display: inline-grid;
-    font-size: 16px;
-    font-weight: 600;
-    height: 240px;
-    left: calc(50% - 120px);
-    line-height: 28px;
-    place-content: center;
-    position: absolute;
-    width: 240px;
-}
-
-.col4__chart-container--yellow::before {
-    background: conic-gradient(#EAB308 calc(75.71*1%), #0000 0);
-    border-radius: 50%;
-    content: "21.81%";
-    inset: 0;
-    -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - 40px), #000 calc(100% - 40px));
-    mask: radial-gradient(farthest-side, #0000 calc(99% - 40px), #000 calc(100% - 40px));
-    position: absolute;
-}
-
-.col4__chart-container--orange {
-    display: inline-grid;
-    height: 240px;
-    left: calc(50% - 120px);
-    place-content: center;
-    position: absolute;
-    width: 240px;
-}
-
-.col4__chart-container--orange::before {
-    background: conic-gradient(#F97316 calc(89.3*1%), #0000 0);
-    border-radius: 50%;
-    content: "";
-    inset: 0;
-    -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - 40px), #000 calc(100% - 40px));
-    mask: radial-gradient(farthest-side, #0000 calc(99% - 40px), #000 calc(100% - 40px));
-    position: absolute;
-}
-
-.col4__chart-container--red {
-    display: inline-grid;
-    height: 240px;
-    left: calc(50% - 120px);
-    place-content: center;
-    position: absolute;
-    width: 240px;
-}
-
-.col4__chart-container--red::before {
-    background: conic-gradient(#EF4444 calc(100*1%), #0000 0);
-    border-radius: 50%;
-    content: "";
-    inset: 0;
-    -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - 40px), #000 calc(100% - 40px));
-    mask: radial-gradient(farthest-side, #0000 calc(99% - 40px), #000 calc(100% - 40px));
-    position: absolute;
-}
-
-.col4__chart-container--green {
-    display: inline-grid;
-    height: 240px;
-    left: calc(50% - 120px);
-    place-content: center;
-    position: absolute;
-    width: 240px;
-}
-
-.col4__chart-container--green::before {
-    background: conic-gradient(#22C55E calc(53.9*1%), #0000 0);
-    border-radius: 50%;
-    content: "";
-    inset: 0;
-    -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - 40px), #000 calc(100% - 40px));
-    mask: radial-gradient(farthest-side, #0000 calc(99% - 40px), #000 calc(100% - 40px));
-    position: absolute;
-}
-
-.col4__chart-container--blue {
-    display: inline-grid;
-    height: 240px;
-    left: calc(50% - 120px);
-    place-content: center;
-    position: absolute;
-    width: 240px;
-}
-
-.col4__chart-container--blue::before {
-    background: conic-gradient(dodgerblue calc(25*1%), #0000 0);
+.vertical__chart-1__container::before {
+    background: conic-gradient(#3B82F6 25%, #22C55E 25% 53.9%, #EAB308 53.9% 75.71%, #F97316 75.21% 89.3%, #EF4444 0);
     border-radius: 50%;
     color: #FFFFFF;
     content: "";
@@ -1186,37 +1071,32 @@ option {
     gap: 8px;
 }
 
-.col4__vertical-chart__content {
+.vertical__chart--content {
     gap: 20px;
     padding: 20px 0 0 20px;
 }
 
-.col4__content--data {
+.content--list {
     flex: 50%;
     gap: 14px;
 }
 
-.col4__data {
+.content--list-items {
     align-items: center;
     display: flex;
     gap: 8px;
     justify-content: space-between;
 }
 
-.col4__data span {
+.content--list-items span {
     color: var(--color-fiord);
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
 }
 
-
-.col4__chart--title {
-    justify-content: space-between;
-}
-
 /* Style for Col 4 - pie chart 2 starts */
-.col4__content--chart {
+.vertical__chart--chart-2 {
     flex: 60%;
     height: 280px;
     position: relative;
@@ -1224,19 +1104,19 @@ option {
 
 .content--chart-yellow {
     color: var(--color-fiord);
-    display: inline-grid;
     font-size: 16px;
     font-weight: 600;
     height: 90px;
-    left: calc(50% - 45px);
+    left: calc(50% - 90px/2);
     line-height: 28px;
     place-content: center;
     position: absolute;
     width: 90px;
+    display: inline-grid;
 }
 
 .content--chart-yellow::before {
-    background: radial-gradient(farthest-side, #EAB308 98%, #0000) top/5px 5px no-repeat, conic-gradient(#EAB308 calc(50*1%), #0000 0);
+    background: radial-gradient(farthest-side, #EAB308 98%, #0000) top/5px 5px no-repeat, conic-gradient(#EAB308 calc(50*1%), #F8FAFC 0);
     border-radius: 50%;
     content: "";
     inset: 0;
@@ -1255,7 +1135,6 @@ option {
 }
 
 .content--chart-orange {
-    display: inline-grid;
     height: 125px;
     left: calc(50% - 125px/2);
     place-content: center;
@@ -1264,7 +1143,7 @@ option {
 }
 
 .content--chart-orange::before {
-    background: radial-gradient(farthest-side, #F97316 98%, #0000) top/5px 5px no-repeat, conic-gradient(#F97316 calc(60*1%), #0000 0);
+    background: radial-gradient(farthest-side, #F97316 98%, #0000) top/5px 5px no-repeat, conic-gradient(#F97316 calc(60*1%), #F8FAFC 0);
     border-radius: 50%;
     content: "";
     inset: 0;
@@ -1283,7 +1162,6 @@ option {
 }
 
 .content--chart-red {
-    display: inline-grid;
     height: 162px;
     left: calc(50% - 162px/2);
     place-content: center;
@@ -1292,7 +1170,7 @@ option {
 }
 
 .content--chart-red::before {
-    background: radial-gradient(farthest-side, #EF4444 98%, #0000) top/5px 5px no-repeat, conic-gradient(#EF4444 calc(70*1%), #0000 0);
+    background: radial-gradient(farthest-side, #EF4444 98%, #0000) top/5px 5px no-repeat, conic-gradient(#EF4444 calc(70*1%), #F8FAFC 0);
     border-radius: 50%;
     content: "";
     inset: 0;
@@ -1311,16 +1189,15 @@ option {
 }
 
 .content--chart-green {
-    display: inline-grid;
     height: 200px;
-    left: calc(50% - 100px);
+    left: calc(50% - 200px/2);
     place-content: center;
     position: absolute;
     width: 200px;
 }
 
 .content--chart-green::before {
-    background: radial-gradient(farthest-side, #22C55E 98%, #0000) top/5px 5px no-repeat, conic-gradient(#22C55E calc(80*1%), #0000 0);
+    background: radial-gradient(farthest-side, #22C55E 98%, #0000) top/5px 5px no-repeat, conic-gradient(#22C55E calc(80*1%), #F8FAFC 0);
     border-radius: 50%;
     content: "";
     inset: 0;
@@ -1339,16 +1216,15 @@ option {
 }
 
 .content--chart-blue {
-    display: inline-grid;
     height: 240px;
-    left: calc(50% - 120px);
+    left: calc(50% - 240px/2);
     place-content: center;
     position: absolute;
     width: 240px;
 }
 
 .content--chart-blue::before {
-    background: radial-gradient(farthest-side, dodgerblue 98%, #0000) top/5px 5px no-repeat, conic-gradient(dodgerblue calc(90*1%), #0000 0);
+    background: radial-gradient(farthest-side, dodgerblue 98%, #0000) top/5px 5px no-repeat, conic-gradient(dodgerblue calc(90*1%), #F8FAFC 0);
     border-radius: 50%;
     content: "";
     inset: 0;
@@ -1376,23 +1252,16 @@ option {
     width: 100%;
 }
 
-.table__title--content {
-    gap: 16px;
-    justify-content: flex-end;
-}
-
-.title--duration a {
-    color: #2563EB !important;
+.table__title--duration a {
+    background-color: #EFF6FF;
+    color: #2563EB;
     font-size: 14px;
     font-weight: 600;
     line-height: 16px;
+    padding: 5px 15px;
 }
 
-.col4__table {
-    width: 100%;
-}
-
-.col4__table--header-row {
+.table__3--header {
     background: #EFF6FF;
     border-top: 0.5px solid #94A3B8;
     gap: 20px;
@@ -1400,14 +1269,16 @@ option {
     padding: 12px 20px;
 }
 
-.col4__table--body-row {
+.table__3--body-row {
+    align-items: center;
     border-top: 0.5px solid #94A3B8;
+    display: flex;
     gap: 20px;
     justify-content: space-between;
     padding: 12px 20px;
 }
 
-.col4__table--body-row>span {
+.table__3--body-row td {
     color: #1E293B;
     font-size: 16px;
     font-weight: 400;
@@ -1425,6 +1296,10 @@ option {
     fill: red;
 }
 
-.col4__table--action a {
+.table__3--action a {
     color: dodgerblue;
+}
+
+.table__3--action-active {
+    background-color: #EFF6FF;
 }
